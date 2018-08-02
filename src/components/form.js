@@ -39,12 +39,12 @@ class FormHandler extends React.Component {
     const name = this.state.details.name;
     const age = this.state.details.age;
     const address = this.state.details.address;
-    this.props.handleForm(name, age, address);
     if ((name === undefined) | (age === undefined) | (address === undefined)) {
       console.log(name);
       alert("Fill all the form fields.");
     } else {
       console.log(name);
+      this.props.handleForm(name, age, address);
       alert("check Output page");
     }
   }
